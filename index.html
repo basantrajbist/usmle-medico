@@ -19,7 +19,9 @@ background: #0d6efd;
 padding: 15px;
 display: flex;
 justify-content: space-between;
+align-items: center;
 color: white;
+flex-wrap: wrap;
 }
 
 .navbar a {
@@ -29,38 +31,62 @@ text-decoration: none;
 font-weight: bold;
 }
 
+.navbar a:hover {
+text-decoration: underline;
+}
+
 /* Hero */
 .hero {
 text-align: center;
-padding: 80px 20px;
+padding: 60px 20px;
 background: white;
 }
 
 .hero h1 {
 color: #0d6efd;
 font-size: 40px;
+margin-bottom: 10px;
 }
 
 .hero p {
 color: #555;
+font-size: 16px;
+}
+
+/* Search */
+.search-box {
+text-align: center;
+margin: 20px;
+}
+
+.search-box input {
+padding: 10px;
+width: 250px;
+border: 1px solid #ccc;
+border-radius: 6px;
 }
 
 /* Cards */
 .container {
 display: flex;
 justify-content: center;
-gap: 20px;
 flex-wrap: wrap;
-padding: 30px;
+gap: 20px;
+padding: 20px;
 }
 
 .card {
 background: white;
-padding: 20px;
 width: 250px;
+padding: 20px;
 border-radius: 10px;
 box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 text-align: center;
+transition: 0.3s;
+}
+
+.card:hover {
+transform: scale(1.05);
 }
 
 .card h3 {
@@ -75,12 +101,20 @@ text-align: center;
 padding: 15px;
 margin-top: 30px;
 }
+
+/* Mobile */
+@media (max-width: 600px) {
+.card {
+width: 90%;
+}
+}
 </style>
 
 </head>
 
 <body>
 
+<!-- Navbar -->
 <div class="navbar">
 <h2>USMLE Medico</h2>
 <div>
@@ -90,33 +124,61 @@ margin-top: 30px;
 </div>
 </div>
 
+<!-- Hero -->
 <div class="hero">
 <h1>USMLE Medico</h1>
-<p>Your complete medical learning platform</p>
+<p>Your complete medical learning platform for USMLE preparation</p>
 </div>
 
+<!-- Search -->
+<div class="search-box">
+<input type="text" id="searchBox" placeholder="Search notes...">
+</div>
+
+<!-- Cards -->
 <div class="container">
 
-<div class="card">
+<div class="card" data-name="usmle notes">
 <h3>USMLE Notes</h3>
-<p>High yield revision notes</p>
+<p>High-yield revision notes for exams</p>
 </div>
 
-<div class="card">
+<div class="card" data-name="medical resources">
 <h3>Medical Resources</h3>
-<p>Important PDFs & links</p>
+<p>Important PDFs, links & materials</p>
 </div>
 
-<div class="card">
+<div class="card" data-name="blogs study tips">
 <h3>Blogs</h3>
-<p>Study strategies & tips</p>
+<p>Study strategies and preparation tips</p>
 </div>
 
 </div>
 
+<!-- Footer -->
 <footer>
-© 2026 USMLE Medico
+© 2026 USMLE Medico | Built with GitHub Pages
 </footer>
+
+<!-- Search Script -->
+<script>
+const searchBox = document.getElementById("searchBox");
+const cards = document.querySelectorAll(".card");
+
+searchBox.addEventListener("keyup", function() {
+let value = searchBox.value.toLowerCase();
+
+cards.forEach(card => {
+let name = card.getAttribute("data-name");
+
+if (name.includes(value)) {
+card.style.display = "block";
+} else {
+card.style.display = "none";
+}
+});
+});
+</script>
 
 </body>
 </html>
