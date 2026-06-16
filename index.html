@@ -9,83 +9,56 @@
 <style>
 body {
 margin: 0;
-font-family: Arial, sans-serif;
+font-family: Arial;
 background: #f4f8fb;
 }
 
 /* Navbar */
 .navbar {
 background: #0d6efd;
-padding: 15px 25px;
+padding: 15px;
 display: flex;
 justify-content: space-between;
-align-items: center;
 color: white;
-}
-
-.navbar h2 {
-margin: 0;
-font-size: 22px;
 }
 
 .navbar a {
 color: white;
-text-decoration: none;
 margin-left: 15px;
+text-decoration: none;
 font-weight: bold;
 }
 
-.navbar a:hover {
-text-decoration: underline;
-}
-
-/* Hero Section */
+/* Hero */
 .hero {
 text-align: center;
-padding: 70px 20px;
+padding: 80px 20px;
 background: white;
 }
 
 .hero h1 {
-font-size: 42px;
 color: #0d6efd;
-margin-bottom: 10px;
+font-size: 40px;
 }
 
 .hero p {
-font-size: 18px;
 color: #555;
-}
-
-/* Button */
-.btn {
-background: #0d6efd;
-color: white;
-padding: 10px 18px;
-border: none;
-border-radius: 6px;
-cursor: pointer;
-margin-top: 10px;
-}
-
-.btn:hover {
-background: #0b5ed7;
 }
 
 /* Cards */
 .container {
 display: flex;
 justify-content: center;
+gap: 20px;
 flex-wrap: wrap;
 padding: 30px;
-gap: 20px;
 }
 
 .card {
 background: white;
-width: 260px;
 padding: 20px;
-border-radius: 12px;
+width: 250px;
+border-radius: 10px;
 box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 text-align: center;
 }
@@ -96,11 +69,11 @@ color: #0d6efd;
 
 /* Footer */
 footer {
-text-align: center;
-padding: 20px;
 background: #0d6efd;
 color: white;
-margin-top: 40px;
+text-align: center;
+padding: 15px;
+margin-top: 30px;
 }
 </style>
 
@@ -108,7 +81,6 @@ margin-top: 40px;
 
 <body>
 
-<!-- Navbar -->
 <div class="navbar">
 <h2>USMLE Medico</h2>
 <div>
@@ -118,36 +90,32 @@ margin-top: 40px;
 </div>
 </div>
 
-<!-- Hero -->
 <div class="hero">
 <h1>USMLE Medico</h1>
-<p>Your personal platform for USMLE preparation and medical learning</p>
-<button class="btn">Start Learning</button>
+<p>Your complete medical learning platform</p>
 </div>
 
-<!-- Cards -->
 <div class="container">
 
 <div class="card">
 <h3>USMLE Notes</h3>
-<p>High-yield notes for fast revision and exam preparation.</p>
+<p>High yield revision notes</p>
 </div>
 
 <div class="card">
 <h3>Medical Resources</h3>
-<p>Important PDFs, links, and curated study materials.</p>
+<p>Important PDFs & links</p>
 </div>
 
 <div class="card">
 <h3>Blogs</h3>
-<p>Study tips, strategies, and medical guidance articles.</p>
+<p>Study strategies & tips</p>
 </div>
 
 </div>
 
-<!-- Footer -->
 <footer>
-© 2026 USMLE Medico | Built with GitHub Pages
+© 2026 USMLE Medico
 </footer>
 
 </body>
