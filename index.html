@@ -1,21 +1,155 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>USMLE Medico</title>
+
+<style>
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+background: #f4f8fb;
+}
+
+/* Navbar */
+.navbar {
+background: #0d6efd;
+padding: 15px 25px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+color: white;
+}
+
+.navbar h2 {
+margin: 0;
+font-size: 22px;
+}
+
+.navbar a {
+color: white;
+text-decoration: none;
+margin-left: 15px;
+font-weight: bold;
+}
+
+.navbar a:hover {
+text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+text-align: center;
+padding: 70px 20px;
+background: white;
+}
+
+.hero h1 {
+font-size: 42px;
+color: #0d6efd;
+margin-bottom: 10px;
+}
+
+.hero p {
+font-size: 18px;
+color: #555;
+}
+
+/* Button */
+.btn {
+background: #0d6efd;
+color: white;
+padding: 10px 18px;
+border: none;
+border-radius: 6px;
+cursor: pointer;
+margin-top: 10px;
+}
+
+.btn:hover {
+background: #0b5ed7;
+}
+
+/* Cards */
+.container {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+padding: 30px;
+gap: 20px;
+}
+
+.card {
+background: white;
+width: 260px;
+padding: 20px;
+border-radius: 12px;
+box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+text-align: center;
+}
+
+.card h3 {
+color: #0d6efd;
+}
+
+/* Footer */
+footer {
+text-align: center;
+padding: 20px;
+background: #0d6efd;
+color: white;
+margin-top: 40px;
+}
+</style>
+
 </head>
 
 <body>
 
-<h1>Welcome to USMLE Medico</h1>
-<p>This is my personal educational website.</p>
+<!-- Navbar -->
+<div class="navbar">
+<h2>USMLE Medico</h2>
+<div>
+<a href="#">Home</a>
+<a href="#">Notes</a>
+<a href="#">Blogs</a>
+<a href="#">Contact</a>
+</div>
+</div>
 
-<h2>Study Materials</h2>
+<!-- Hero -->
+<div class="hero">
+<h1>USMLE Medico</h1>
+<p>Your personal platform for USMLE preparation and medical learning</p>
+<button class="btn">Start Learning</button>
+</div>
 
-<ul>
-<li>USMLE Notes</li>
-<li>Medical Resources</li>
-<li>Blogs</li>
-</ul>
+<!-- Cards -->
+<div class="container">
+
+<div class="card">
+<h3>USMLE Notes</h3>
+<p>High-yield notes for fast revision and exam preparation.</p>
+</div>
+
+<div class="card">
+<h3>Medical Resources</h3>
+<p>Important PDFs, links, and curated study materials.</p>
+</div>
+
+<div class="card">
+<h3>Blogs</h3>
+<p>Study tips, strategies, and medical guidance articles.</p>
+</div>
+
+</div>
+
+<!-- Footer -->
+<footer>
+© 2026 USMLE Medico | Built with GitHub Pages
+</footer>
 
 </body>
 </html>
